@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Form</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="wrapper">
+        <h1>Registeration Form</h1>
+        <form action="results.html" method="get" class="form">
+        <div class="input-box">
+            <label for="name"><strong>Name</strong></label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="email"><strong>Email</strong></label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="age"><strong>Age</strong></label>
+            <input type="number" name='age' id="age" min="18" max="100" required>
+        </div>
+        <div>
+            <label for="date"><strong>Date</strong></label>
+            <input type="date" id="date" name="date" required>
+        </div>
+        <div>
+            <label for="pwd"><strong>Password</strong></label>
+            <input type="password" id="pwd" name='pswd' required>
+        </div>
+        <div>
+           <strong> Gender</strong>
+        </div>
+        <div>
+            <label for="male"><strong>Male</strong></label>
+            <input type="radio" id="male" name='gender' value="male" >
+            </div>
+            <div>
+            <label for="female"><strong>Female</strong></label>
+            <input type="radio" id="female" name='gender' value="female" >
+        
+        </div>
+        <div>
+            <label for="dropdown"><strong>What is your favourite fruit</strong></label> 
+            <select id="dropdown" name="dropdown">
+                <option value="Apple">Apple</option>
+                <option value="Banana">Banana</option>
+                </select>
+
+        </div>
+        <div>
+            <label for="file"><strong>Upload your image</strong></label>
+            <input type="file" id="file" name="file">
+        </div>
+
+        <button class="btn" type="reset">Reset</button>
+        <button class="btn" type="submit">Submit</button>
+    </form>
+</div>
+       
+        
+        
+    </body>
+</html>
