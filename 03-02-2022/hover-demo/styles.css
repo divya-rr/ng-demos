@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+   
+
+
+}
+#circle{
+    align-items: center;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 3s;
+    border-radius: 20px;
+    color: white;
+    background-color: blue;
+    cursor: pointer;
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+}
+.hover{
+    transform: scale(5);
+}

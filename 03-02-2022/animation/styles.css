@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: azure;
+    color:black ;
+    text-align: center;
+    line-height: 1.2;
+}
+.container{
+    padding: 0px 30px;
+    margin: auto;
+}
+#showcase h1{
+    
+    line-height: 1.3;
+    position: relative;
+    animation-name: heading;
+   
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes heading {
+    0%{top: -50px;}
+    100%{top: 200px;}
+    
+}
+#content{
+    position: relative;
+    animation-name: content;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes content{
+    0%{
+        left: -30px;
+
+    }
+    100%{
+        left: 0;
+    }
+
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    color: gray;
+    opacity: 0;
+    animation-name: btn;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes btn {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+    
+}
