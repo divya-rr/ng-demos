@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="start_btn" id="start"><button>Start quiz</button></div>
+    <div class="box">
+        <div class="title">Some rules of the mcq quiz</div>
+        <div class="list">
+            <div class="rules">1.You will have only 15seconds to solve each question</div>
+            <div class="rules">2.You can select your answer only once</div>
+            <div class="rules">3.You can't exit from the quiz while you are playing</div>
+            <div class="rules">4.You will get points on the basis of your current answers</div>
+
+        </div>
+        <div class="buttons">
+            <button class="quit">Exit Quiz</button>
+            <button class="restart">Continue</button>
+        </div>
+
+    </div>
+    <div class="quiz-box">
+        <header>
+            <div class="title">Quiz application</div>
+            <div class="timer">Time left</div>
+            <div class="timer-set">in seconds</div>
+        </header>
+        <section>
+            <div class="que">
+                <span>Ques</span>
+                <div class="icon"></div>
+            </div>
+            <div class="option-list">
+                <div class="option">Option 1</div>
+                <div class="option">Option 2</div>
+            </div>
+        </section>
+    </div>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
