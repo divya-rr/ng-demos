@@ -9,8 +9,8 @@ body{
     line-height: 1.2;
 }
 .container{
-    padding: 0px 30px;
-    margin: auto;
+    padding: 50px 30px;
+    margin: 40px;
 }
 #showcase h1{
     
@@ -43,13 +43,19 @@ body{
 
 }
 .btn{
-    display: flex;
-    justify-content: center;
-    color: gray;
+    color:blue;
+    font-size: 23px;
+    border: 1px solid rgb(235, 101, 101);
+    border-radius: 6px;
     opacity: 0;
     animation-name: btn;
     animation-duration: 3s;
     animation-fill-mode: forwards;
+    margin:100px 500px;
+    padding: 10px 10px;
+    background-color:  white;
+    text-align: center;
+    width:25%
 }
 @keyframes btn {
     0%{opacity: 0;}
