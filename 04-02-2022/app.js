@@ -2,7 +2,7 @@ const start = document.querySelector(".start_btn button");
 const box = document.querySelector(".box");
 const exit_btn =box.querySelector(".buttons .quit");
 const continue_btn = box.querySelector(".buttons .restart");
-const quiz_box = box.querySelector(".quiz-box");
+const quiz_box = document.querySelector(".quiz-box");
 start.onclick=()=>{
     box.classList.add("active")
 }
