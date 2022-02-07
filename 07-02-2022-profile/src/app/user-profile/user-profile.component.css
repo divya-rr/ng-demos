@@ -1,0 +1,157 @@
+
+.container{
+    background:rgb(226, 232, 240);
+    height: 99vh;
+    overflow-y: hidden;
+  
+}
+
+nav{
+    
+    background-color: rgb(233,236,239);
+    margin: 23px;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+nav ul li{
+   padding: 12px;
+    font-size: 12px;
+    font-weight: 300;
+    font-family: sans-serif;
+    cursor: pointer;
+    
+}
+ul li:hover{
+    color: blue;
+}
+.row .column1{
+    flex: 15%;
+    background-color: white;
+    text-align: center;
+    align-items: center;
+    border-radius: 4px;
+    
+  
+  
+    
+  
+}
+.column3{
+    flex: 25%;
+    background-color: white;
+    border-radius: 4px;
+    
+  
+    height: 50%;
+
+}
+.row{
+    display: flex;
+   margin: 23px;
+  
+    /* justify-content: center;
+    align-items: center; */
+    
+   
+}
+.row .column1 .center{
+   
+    justify-content: center;
+    align-items: center;
+}
+.row .column1 img{
+   
+    border-radius: 50%;
+    width: 35%;
+    height: 35%;
+   
+    
+}
+ .column2{
+    background-color: white;
+    margin-left: 23px;
+    border-radius: 4px;
+   height: 30%;
+    flex: 50%;
+   
+    }
+    
+.column4{
+    flex: 25%;
+    background: white;
+    margin-left: 13px;
+    margin-bottom: 300px;
+    border-radius: 4px;
+    
+  
+}
+.column5{
+    flex: 25%;
+    background: white;
+    margin: 23px;
+    border-radius: 4px;
+    margin-bottom: 300px;
+   
+
+}
+.form{
+    height:30%
+}
+button{
+   padding: 12px;
+    margin: 15px 0px 15px 0px;
+    font-size: 12px;
+    border-radius: 3px;
+}
+.follow{
+    color: white;
+    background-color: blue;
+    margin-right: 12px;
+    
+    border: none;
+}
+.message{
+    color: blue;
+    background-color: white;
+    border: 1px solid blue;
+   
+
+}
+.form-list{
+    padding: 12px;
+}
+.role{
+    padding: 12px;
+    color: rgb(109,117,125);
+}
+.area{
+    padding: 12px;
+    color: rgb(109,117,125);
+}
+span{
+    padding-left: 50px;
+    color: rgb(109,117,125);
+}
+i{
+    padding-left: 12px;
+}
+.work{
+    padding: 15px;
+  
+}
+.title{
+    padding-top: 10px;
+    padding: 15px;
+    color: rgb(28,180,218);
+    font-size: 23px;
+}
+progress{
+    width:100%
+}
+.name{
+    font-size: 23px;
+}
