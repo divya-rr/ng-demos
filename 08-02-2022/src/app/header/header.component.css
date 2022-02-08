@@ -1,0 +1,28 @@
+
+
+nav{
+    
+    background-color: rgb(233,236,239);
+    margin: 23px;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+nav ul li{
+   padding: 12px;
+    font-size: 15px;
+    font-weight: 300;
+    font-family: sans-serif;
+    cursor: pointer;
+    
+}
+ul li a:hover{
+    color: blue;
+}
+a{
+    text-decoration: none;
+    color:black
+}

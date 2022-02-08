@@ -1,0 +1,19 @@
+.section1{
+    background-color: white;
+    
+    border-radius: 4px;
+    margin: 12px 12px 12px 23px;
+    
+    }
+    span{
+        padding-left: 300px;
+        color: rgb(109,117,125);
+    }
+    i{
+        padding-left: 12px;
+    }
+    .form-list{
+        padding: 6px;
+    }
+   
+  
