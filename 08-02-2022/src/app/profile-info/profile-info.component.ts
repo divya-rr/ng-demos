@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-profile-info',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile-info.component.css']
 })
 export class ProfileInfoComponent implements OnInit {
+  
+@Input()
+  media!:{name:string,link:string}[];
 
   constructor() { }
 

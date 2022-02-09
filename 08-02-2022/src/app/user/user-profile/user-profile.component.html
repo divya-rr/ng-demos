@@ -2,17 +2,17 @@
 
     <div class="column1">
 
-        <app-profile></app-profile>
-        <app-profile-info></app-profile-info>
+        <app-profile [name]="name" [role]="role" [area]="area" ></app-profile>
+        <app-profile-info [media]="media"></app-profile-info>
     </div>
     <div class="column2">
-        <app-data></app-data>
+        <app-data [info]="info"></app-data>
         <div class="skills">
             <div class="common">
-                <app-skills></app-skills>
+                <app-skills [work]="work" [title]="title[0]" [percent]="progress1"></app-skills>
             </div>
             <div class="common">
-                <app-skills></app-skills>
+                <app-skills [work]="work" [title]="title[1]" [percent]="progress2"></app-skills>
             </div>
 
 

@@ -3,11 +3,13 @@
     background-color: white;
     margin: 23px;
     border-radius: 4px;
+  
    
 }
 span{
     padding-left: 300px;
     color: rgb(109,117,125);
+    display: flex;
     
 }
 .form-list{
