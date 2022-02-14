@@ -1,0 +1,46 @@
+<form class="educationBox" [formGroup]="educationForm">
+    <h4>Education</h4>
+
+    <div class="layoutEducation">
+
+        <label for="school">School <small style="color: red;">*</small></label>
+        <div>
+            <input id="school" type="text" formControlName="school" />
+            <span style="color:red" *ngIf='school?.invalid  && school?.touched'>
+                <span *ngIf="school?.errors?.['required']">School is required
+                </span>
+            </span>
+        </div>
+        <label for="program">Program <small style="color: red;">*</small></label>
+        <div>
+            <input type="text" id="program" formControlName="program">
+            <span style="color:red" *ngIf='program?.invalid  && program?.touched'>
+                <span *ngIf="program?.errors?.['required']">Program is required
+                </span>
+            </span>
+        </div>
+        <label for="educationLevel">Education Level <small style="color: red;">*</small></label>
+        <div>
+            <select id="educationLevel" formControlName="educationLevel">
+                <option value="-select-">-select-</option>
+            </select>
+            <span style="color:red" *ngIf='educationLevel?.invalid  && educationLevel?.touched'>
+                <span *ngIf="educationLevel?.errors?.['required']">Education level is required
+                </span>
+            </span>
+        </div>
+        <label></label>
+
+        <fieldset class="border rounded-3 p-3">
+            <legend class="float-none w-auto px-3">Education Status</legend>
+            <input type="radio" name="status" class="status">
+            <label>Graduated</label><br>
+            <input type="radio" name="status" class="status">
+            <label>Current Enrolled</label><br>
+            <input type="radio" name="status" class="status">
+            <label>Did not graduate</label>
+        </fieldset>
+        <label for="date">Graduation Date</label>
+        <input id="date" type="date" />
+    </div>
+</form>

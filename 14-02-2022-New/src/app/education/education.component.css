@@ -1,0 +1,28 @@
+.layoutEducation{
+    display: grid; 
+     grid-template-columns:150px 0.5fr ;
+}
+label{
+    text-align: right;
+}
+label,input,select{
+    margin:6px;
+    width: -webkit-fill-available;
+}
+h4{
+    background-color: rgb(221, 221, 221);
+}
+.educationBox{
+    background-color: rgb(246,246,246);
+    margin-bottom: 24px;
+}
+fieldset{
+    background-color: white;
+    margin-bottom: 15px;
+}
+fieldset input+label{
+    width: auto;
+}
+.status{
+    width: auto;
+}

@@ -1,0 +1,17 @@
+.layoutWorkExp{
+    display: grid; 
+     grid-template-columns:150px 0.5fr ;
+}
+label{
+    text-align: right;
+}
+label,input,textarea{
+    margin:6px
+}
+h4{
+    background-color: rgb(221, 221, 221);
+}
+.workExperienceBox{
+    background-color: rgb(246,246,246);
+    margin-bottom: 24px;
+}

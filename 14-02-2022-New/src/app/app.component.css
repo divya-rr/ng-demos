@@ -1,0 +1,34 @@
+#domain_header{
+    background-color: red;
+    color:white;
+    padding-left: 10px;
+}
+
+#domain_header h1 {
+    display: inline-block;
+}
+
+.form{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+   background-color: white;
+   border:4px solid  rgb(204,204,204);
+  
+    
+}
+.jobSearchPage{
+    background-color: rgb(204,204,204);
+}
+input{
+    margin: 12px;
+}
+#layoutButtons{
+    display: flex;flex-direction: row; justify-content: center; 
+}
+#layoutComponents{
+    display:flex;flex-direction: column;
+}
+
+
+ 
