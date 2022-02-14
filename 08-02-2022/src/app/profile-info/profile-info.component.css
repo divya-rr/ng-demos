@@ -21,5 +21,31 @@
         padding: 6px;
       
     }
+    .socialMediaDetails{
+        background-color: white;
+        margin: 23px;
+        border-radius: 4px;
+        width: -webkit-fill-available;
+       
+    }
+    
+    .detailsColor{
+        color: rgb(109,117,125);
+    
+    }
+    table{
+        border-collapse:collapse
+    }
+    
+    td{
+        padding:15px;
+        
+        border-bottom: 1px solid rgb(109,117,125);
+       
+        
+    }
+    tr:last-child td{
+        border-bottom:0;
+    }
    
   
