@@ -1,0 +1,23 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-classes',
+  templateUrl: './classes.component.html',
+  styleUrls: ['./classes.component.css']
+})
+export class ClassesComponent implements OnInit {
+  name:string='';
+  sub_10:string=''
+  science:string='';
+  commerce:string=''
+  subjects=["English",'Maths','Social Science',"Science","Hindi"]
+  subjects_10=["Social Science","English","Hindi","Maths","Science"]
+  science_sub=["Physics","Chemistry","Maths","English"]
+  commerce_sub=["Accountancy","Economics","English","Business Studies"]
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}

@@ -1,0 +1,18 @@
+.layout{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.sameClass{
+    display: flex;
+    
+    
+}
+.class11{
+    margin-right: 20px;
+}
+.class12{
+    align-items: flex-start;
+    justify-content: flex-start;
+}
