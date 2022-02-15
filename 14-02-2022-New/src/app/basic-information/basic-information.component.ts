@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { passwordValidator } from '../shared/password.validator';
 
 @Component({
   selector: 'app-basic-information',
@@ -11,18 +12,18 @@ export class BasicInformationComponent implements OnInit {
   constructor(private fb:FormBuilder) { }
 
   basicInfo=this.fb.group({
-    email:['',Validators.required],
-    password:['',Validators.required],
+    email:['',[Validators.required,Validators.pattern("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9]+$"),Validators.email]],
+    password:['',[Validators.required,Validators.minLength(8)]],
     retypePassword:['',Validators.required],
     firstName:['',Validators.required],
     lastName:['',Validators.required],
-    phoneNumber:['',Validators.required],
+    phoneNumber:['',[Validators.required,Validators.pattern("[1-9][0-9]{9}")]],
     address:['',Validators.required],
     city:['',Validators.required],
     province:['',Validators.required],
     country:['',Validators.required]
 
-  })
+  },{validators:passwordValidator})
   get email(){
     return this.basicInfo.get('email')
   }

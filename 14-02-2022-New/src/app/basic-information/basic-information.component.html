@@ -1,4 +1,4 @@
-<form class="basicInfoBox" [formGroup]="basicInfo">
+<div class="basicInfoBox" [formGroup]="basicInfo">
     <h4>Basic Information</h4>
 
 
@@ -10,6 +10,7 @@
             <span style="color:red" *ngIf='email?.invalid  && email?.touched'>
                 <span *ngIf="email?.errors?.['required']">Email
                     is required</span>
+                <span style="color:red" *ngIf="email?.errors?.['pattern']">Email is not valid</span>
             </span>
         </div>
         <label for="password">Password</label>
@@ -18,14 +19,18 @@
             <span style="color:red" *ngIf='password?.invalid  && password?.touched'>
                 <span *ngIf="password?.errors?.['required']">Password
                     is required</span>
+                    <span *ngIf="password?.errors?.['minLength']">Password
+                       length should be at least characters</span>
             </span>
         </div>
         <label for="pwd">Retype Password</label>
         <div>
-            <input type="text" id="pwd" formControlName="retypePassword">
+            <input type="password" id="pwd" [class.is-invalid]="basicInfo?.errors?.['misMatch']"  formControlName="retypePassword">
+            <span style="color:red" *ngIf="basicInfo?.errors?.['misMatch']">Password MisMatch</span>
             <span style="color:red" *ngIf='retypePassword?.invalid  && retypePassword?.touched'>
-                <span *ngIf="retypePassword?.errors?.['required']">Please confirm the password
+                <span *ngIf="basicInfo?.get('retypePassword')?.errors?.['required']">Please confirm the password
                 </span>
+                
             </span>
         </div>
         <label for="firstName">First name</label>
@@ -46,10 +51,13 @@
         </div>
         <label for="phone">Phone Number</label>
         <div>
-            <input type="number" id="phone" formControlName="phoneNumber">
+            <input type="number" id="phone" formControlName="phoneNumber" placeholder="999-999-9999">
             <span style="color:red" *ngIf='phoneNumber?.invalid  && phoneNumber?.touched'>
                 <span *ngIf="phoneNumber?.errors?.['required']">Phone Number is required
                 </span>
+                <span style="color:red"
+                *ngIf='phoneNumber?.errors?.["pattern"] '>Phone
+                number should be of 10 digits</span>
             </span>
         </div>
         <label for="address">Address</label>
@@ -91,4 +99,4 @@
 
     </div>
 
-</form>
+</div>
