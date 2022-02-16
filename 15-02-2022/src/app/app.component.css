@@ -30,3 +30,12 @@ nav ul li:hover{
     background-color: #555;
     color: white;
 }
+.dropdown-menu{
+    display: flex;
+    flex-direction: column;
+}
+.dropdown-submenu{
+position: absolute;
+left: 100%;
+  
+}

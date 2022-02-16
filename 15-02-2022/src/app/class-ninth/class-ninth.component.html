@@ -1,0 +1,18 @@
+<div class="class9">
+    <h5>Class 9th</h5>
+    <div class="form-group">
+        <input class="form-control" type="text" placeholder="Filter subjects of class 9th"
+            [(ngModel)]="name">
+    </div>
+
+
+    <ul>
+        <li *ngFor="let subject of subjects|filter:name">
+
+            {{subject}}
+
+        </li>
+
+    
+    </ul>
+</div>

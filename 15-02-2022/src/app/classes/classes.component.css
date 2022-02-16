@@ -16,3 +16,6 @@
     align-items: flex-start;
     justify-content: flex-start;
 }
+input{
+    border: 1px solid black;
+}
