@@ -1,0 +1,32 @@
+<mat-slider class="align" aria-label="unit(s)" min="5" max="15"></mat-slider>
+<mat-slide-toggle>Slide me!</mat-slide-toggle>
+
+<mat-toolbar>
+  <span>Card view</span>
+</mat-toolbar>
+<div class="content">
+  <div style="display: flex;flex-wrap: wrap; gap:16px" fxLayout="row wrap" fxlayoutGap="16px grid">
+    <div fxFlex="25%"  *ngFor="let num of nums">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Books{{num}}</mat-card-title>
+          <mat-card-subtitle>Subtitle</mat-card-subtitle>
+        </mat-card-header>
+        <img matCardImage src="../assets/book.jpg">
+        <mat-card-content>
+          Text content
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>Visit library</button>
+
+        </mat-card-actions>
+        <mat-card-footer>
+          Footer
+        </mat-card-footer>
+      </mat-card>
+      </div>
+
+    </div>
+
+
+  </div>
