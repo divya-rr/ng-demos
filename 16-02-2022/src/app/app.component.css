@@ -1,0 +1,41 @@
+nav{
+    font-size: 23px;
+    background-color: #f1f1f1;
+    border:1px solid black;
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li{
+    cursor: pointer;
+    padding: 0.5rem;
+    /* flex: auto; */
+    text-align: center;
+}
+nav ul li{
+    cursor: pointer;
+    padding: 0.5rem;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+nav ul li:hover{
+    background-color: #555;
+    color: white;
+}
+.dropdown-menu{
+    display: flex;
+    flex-direction: column;
+}
+.dropdown-submenu{
+position: absolute;
+left: 100%;
+  
+}
