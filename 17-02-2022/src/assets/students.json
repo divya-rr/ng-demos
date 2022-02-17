@@ -1,0 +1,18 @@
+[
+    {
+       "Name":"John",
+       "Class":"9th",
+       "Subject":"Physics"
+    },
+    {
+        "Name":"Rahul",
+        "Class":"10th",
+        "Subject":"chemistry"
+     },
+     {
+        "Name":"David",
+        "Class":"11th",
+        "Subject":"Maths"
+     }
+
+]

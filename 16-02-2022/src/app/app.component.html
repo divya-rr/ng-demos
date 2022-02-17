@@ -1,7 +1,37 @@
-<nav>
-  <ul>
-      <li>Home</li>
-      <li routerLink="/classes">Classes</li>
-      </ul>
-      </nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <a routerLink="/home" class="navbar-brand">Home</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+
+
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ">
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button" routerLink="/classes"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          Classes of students
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <li><a class="dropdown-item" routerLink="/9th" href="">9th</a></li>
+          
+             
+              
+             <li><a class="dropdown-item" routerLink="/10th" href="">10th</a></li>
+          <li><a class="dropdown-item" routerLink="/11th" href="">11th(Science)</a></li>
+          <li><a class="dropdown-item" routerLink="/11th" href="">11th(Commerce)</a></li>
+
+
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
       <router-outlet></router-outlet>
