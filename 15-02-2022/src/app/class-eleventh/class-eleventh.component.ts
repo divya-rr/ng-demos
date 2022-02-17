@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-class-eleventh',
@@ -8,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class ClassEleventhComponent implements OnInit {
   science:string=''
   commerce:string=''
-  science_sub=["Physics","Chemistry","Maths","English"]
-  commerce_sub=["Accountancy","Economics","English","Business Studies"]
+ @Input()
+  science_sub!: string[];
+  @Input()
+  commerce_sub!:string[];
 
   constructor() { }
 

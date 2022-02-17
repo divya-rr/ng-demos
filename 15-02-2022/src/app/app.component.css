@@ -30,7 +30,7 @@ nav ul li:hover{
     background-color: #555;
     color: white;
 }
-.dropdown-menu{
+/* .dropdown-menu{
     display: flex;
     flex-direction: column;
 }
@@ -38,4 +38,4 @@ nav ul li:hover{
 position: absolute;
 left: 100%;
   
-}
+} */

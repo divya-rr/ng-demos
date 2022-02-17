@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-class-tenth',
@@ -6,8 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./class-tenth.component.css']
 })
 export class ClassTenthComponent implements OnInit {
-  sub_10:string=''
-  subjects_10=["Social Science","English","Hindi","Maths","Science"]
+
+  sub_10: string='';
+  @Input()
+  class!: string;
+
+  @Input() subjects_10!: string[];
 
   constructor() { }
 

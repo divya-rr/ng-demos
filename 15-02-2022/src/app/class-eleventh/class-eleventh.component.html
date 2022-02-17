@@ -1,28 +1,28 @@
-<!-- <div class="sameClass">
+<div class="sameClass">
     <div class="class11 ">
         <h5>Class 11th(Science)</h5>
         <div class="form-group">
-            <input class="form-control " type="text" placeholder="Filter subjects of class11th(Science)"
+            <input class="form-control " type="text" placeholder="Filter subjects of class 11"
                 [(ngModel)]="science">
         </div>
 
 
         <ul>
-            <li *ngFor="let subject of science_sub|filter:science">{{subject}}</li>
+            <li *ngFor="let subject_sci of science_sub|filter:science">{{subject_sci}}</li>
         </ul>
     </div>
     <div class="class11">
         <h5>Class 11th(Commerce)</h5>
         <div class="form-group">
-            <input class="form-control" type="text" placeholder="Filter subjects of class11th(Commerce)"
+            <input class="form-control" type="text" placeholder="Filter subjects of class 11"
                 [(ngModel)]="commerce">
         </div>
 
 
         <ul>
-            <li *ngFor="let subject of commerce_sub|filter:commerce">{{subject}}</li>
+            <li *ngFor="let subject_com of commerce_sub|filter:commerce">{{subject_com}}</li>
         </ul>
     </div>
-</div> -->
+</div>
 
 <router-outlet></router-outlet>

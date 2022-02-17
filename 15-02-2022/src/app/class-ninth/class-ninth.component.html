@@ -1,13 +1,14 @@
 <div class="class9">
     <h5>Class 9th</h5>
     <div class="form-group">
-        <input class="form-control" type="text" placeholder="Filter subjects of class 9th"
+        <input class="form-control" type="text" placeholder="Filter subjects of class 9"
             [(ngModel)]="name">
     </div>
 
 
     <ul>
-        <li *ngFor="let subject of subjects|filter:name">
+        <li *ngFor="let subject of subjects_9|filter:name">
+            <span *ngIf="subject==null">{{subject}}</span>
 
             {{subject}}
 

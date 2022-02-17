@@ -1,70 +1,15 @@
+<!-- <app-class-ninth [subjects]="subjects"></app-class-ninth>
+<app-class-tenth [subjects_10]="subjects_10"></app-class-tenth>
+<app-class-eleventh [science_sub]="science_sub" [commerce_sub]="commerce_sub"></app-class-eleventh> -->
+
 <div class="layout">
-    <h3>Subject details of different classes</h3>
-    <div class="class9">
-        <h5>Class 9th</h5>
-        <div class="form-group">
-            <input class="form-control" type="text" placeholder="Filter subjects of class 9th"
-                [(ngModel)]="name">
-        </div>
-
-
-        <ul>
-            <li *ngFor="let subject of subjects|filter:name">
-
-                {{subject}}
-
-            </li>
-
-        
-        </ul>
-    </div>
-    <div class="class10">
-        <h5>Class 10th</h5>
-        <div class="form-group">
-            <input class="form-control" type="text" placeholder="Filter subjects of class 10th" 
-                [(ngModel)]="sub_10">
-        </div>
-
-
-        <ul>
-            <li *ngFor="let subject of subjects_10|filter:sub_10">
-
-                {{subject}}
-
-            </li>
-
-        
-        </ul>
-    </div>
-    <div class="sameClass">
-        <div class="class11 ">
-            <h5>Class 11th(Science)</h5>
-            <div class="form-group">
-                <input class="form-control " type="text" placeholder="Filter subjects of class11th(Science)"
-                    [(ngModel)]="science">
-            </div>
-
-
-            <ul>
-                <li *ngFor="let subject of science_sub|filter:science">{{subject}}</li>
-            </ul>
-        </div>
-        <div class="class11">
-            <h5>Class 11th(Commerce)</h5>
-            <div class="form-group">
-                <input class="form-control" type="text" placeholder="Filter subjects of class11th(Commerce)"
-                    [(ngModel)]="commerce">
-            </div>
-
-
-            <ul>
-                <li *ngFor="let subject of commerce_sub|filter:commerce">{{subject}}</li>
-            </ul>
-        </div>
-    </div>
-   
-
-
-
-
+<app-common-class [class]="classes[0]" [subjects]="subjects_9" [placeholder]="place[0]"  ></app-common-class>
+<app-common-class [class]="classes[1]" [subjects]="subjects_10" [placeholder]="place[1]"  ></app-common-class>
+<div class="sameClass">
+<app-common-class style="margin-right: 20px;"  [class]="classes[2]" [subjects]="science_sub" [placeholder]="place[2]"  ></app-common-class>
+<app-common-class  [class]="classes[3]" [subjects]="commerce_sub" [placeholder]="place[2]" ></app-common-class>
 </div>
+</div>
+
+
+

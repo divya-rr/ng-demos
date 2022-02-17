@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-class-ninth',
@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClassNinthComponent implements OnInit {
   name:string=''
-  subjects=["English",'Maths','Social Science',"Science","Hindi"]
+  @Input()
+  subjects_9!: string[];
 
   constructor() { }
 

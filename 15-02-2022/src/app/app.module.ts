@@ -9,8 +9,8 @@ import { FilterPipe } from './filter.pipe';
 import { ClassNinthComponent } from './class-ninth/class-ninth.component';
 import { ClassTenthComponent } from './class-tenth/class-tenth.component';
 import { ClassEleventhComponent } from './class-eleventh/class-eleventh.component';
-import { ScienceComponent } from './class-eleventh/science/science.component';
-import { CommerceComponent } from './eleventh/commerce/commerce.component';
+import { CommonClassComponent } from './common-class/common-class.component';
+
 
 @NgModule({
   declarations: [
@@ -20,8 +20,8 @@ import { CommerceComponent } from './eleventh/commerce/commerce.component';
     ClassNinthComponent,
     ClassTenthComponent,
     ClassEleventhComponent,
-    ScienceComponent,
-    CommerceComponent
+    CommonClassComponent,
+    
   ],
   imports: [
     BrowserModule,

@@ -6,9 +6,17 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class FilterPipe implements PipeTransform {
 
   transform(value: string[],searchTerm:string):string[] {
-    return value.filter(function(search: any){
+    // if(value.indexOf(searchTerm)===-1)
+    //  return ["No data found"];
+    if(!value || !searchTerm){
+      return value
+    }
+ 
+    return value.filter(search=>{
+      
       return search.toLowerCase().indexOf(searchTerm.toLowerCase())>-1
     });
   }
 
 }
+
