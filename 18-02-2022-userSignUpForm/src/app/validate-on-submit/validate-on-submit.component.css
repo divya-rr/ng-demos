@@ -1,0 +1,28 @@
+ .form-group{
+    margin-bottom: 20px;
+} 
+label::after{
+    content: ' *';
+    color: red;
+}
+input[type=reset]{
+    background-color: rgb(192,192,192);
+    margin-left: 23px;
+    width: 5%;
+}
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+    background-image:url(../../assets/red-cross.png) ;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size:contain;
+  
+   
+  
+    
+    
+}
+
+form{
+    margin-top: 20px;
+}
