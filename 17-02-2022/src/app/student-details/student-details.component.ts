@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Student } from '../student';
+import { Student } from '../Student';
+
 
 
 @Component({
@@ -9,17 +10,17 @@ import { Student } from '../student';
   styleUrls: ['./student-details.component.css']
 })
 export class StudentDetailsComponent implements OnInit {
-  students!: Student[];
+  students!:Student[];
 
   constructor(private httpClient:HttpClient) { }
 
   ngOnInit(): void {
-    this.httpClient.get('/assets/students.json').subscribe((result:any)=>{
-      this.students=result
-    });
+    this.httpClient.get('/assets/students.json').subscribe((result:Student[])=>{})
+    };
     
 
     
   }
 
-}
+
+
