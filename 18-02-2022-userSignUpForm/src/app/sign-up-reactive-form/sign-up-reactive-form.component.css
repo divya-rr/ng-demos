@@ -1,7 +1,7 @@
- .form-group{
+.form-group{
     margin-bottom: 20px;
 } 
-label::after{
+label.required::after{
     content: ' *';
     color: red;
 }
@@ -12,7 +12,7 @@ input[type=reset]{
 }
 input.ng-invalid.ng-touched{
     border: 1px solid red;
-    background-image:url(../../assets/red-cross.png) ;
+    background-image:url(../../assets/redcross.png) ;
     background-repeat: no-repeat;
     background-position: 100%;
     background-size:contain;
@@ -22,7 +22,11 @@ input.ng-invalid.ng-touched{
     
     
 }
+.Invalid{
+    color: red;
+}
 
 form{
     margin-top: 20px;
 }
+

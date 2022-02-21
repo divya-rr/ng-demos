@@ -5,17 +5,24 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { ValidateOnSubmitComponent } from './validate-on-submit/validate-on-submit.component';
+import { TdfApproachComponent } from './tdf-approach/tdf-approach.component';
+import { SignUpReactiveFormComponent } from './sign-up-reactive-form/sign-up-reactive-form.component';
+import { FieldErrorDisplayComponent } from './field-error-display/field-error-display.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ValidateOnSubmitComponent
+  
+    TdfApproachComponent,
+       SignUpReactiveFormComponent,
+       FieldErrorDisplayComponent,
+   
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,ReactiveFormsModule
+    AppRoutingModule,ReactiveFormsModule,FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

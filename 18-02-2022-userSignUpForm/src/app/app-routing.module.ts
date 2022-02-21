@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ValidateOnSubmitComponent } from './validate-on-submit/validate-on-submit.component';
+import { TdfApproachComponent } from './tdf-approach/tdf-approach.component';
+
+import { SignUpReactiveFormComponent } from './sign-up-reactive-form/sign-up-reactive-form.component';
 
 const routes: Routes = [
-  {path:'validate',component:ValidateOnSubmitComponent}
+  {path:'reactive',component:SignUpReactiveFormComponent},
+  {path:'tdf',component:TdfApproachComponent}
 ];
 
 @NgModule({

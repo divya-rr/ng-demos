@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ValidateOnSubmitComponent } from './validate-on-submit.component';
+import { TdfApproachComponent } from './tdf-approach.component';
 
-describe('ValidateOnSubmitComponent', () => {
-  let component: ValidateOnSubmitComponent;
-  let fixture: ComponentFixture<ValidateOnSubmitComponent>;
+describe('TdfApproachComponent', () => {
+  let component: TdfApproachComponent;
+  let fixture: ComponentFixture<TdfApproachComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ValidateOnSubmitComponent ]
+      declarations: [ TdfApproachComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ValidateOnSubmitComponent);
+    fixture = TestBed.createComponent(TdfApproachComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
