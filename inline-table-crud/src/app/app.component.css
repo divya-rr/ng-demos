@@ -1,0 +1,17 @@
+table{
+    border: 1px solid rgb(219, 219, 219);
+    border-collapse: collapse;
+    width: 100%;
+}
+table tr,td,th{
+    border: 1px solid rgb(219, 219, 219);
+}
+table td,th{
+    padding: 15px;
+}
+input{
+    width: 100%;
+}
+tr:nth-child(even){
+    background-color: rgb(249,249,249);
+}
