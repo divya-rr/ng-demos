@@ -7,7 +7,7 @@ import { FormGroup, NgForm } from '@angular/forms';
   styleUrls: ['./tdf-approach.component.css']
 })
 export class TdfApproachComponent implements OnInit {
-
+formInvalid=false
 
  
 
@@ -19,6 +19,8 @@ export class TdfApproachComponent implements OnInit {
   onSubmit(form:NgForm){
     if(form.valid)
     console.log(form.value)
+    else
+    this.formInvalid=true
   
     
   }
