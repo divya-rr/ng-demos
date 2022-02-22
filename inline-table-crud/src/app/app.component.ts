@@ -12,13 +12,15 @@ export class AppComponent {
   list: { 'firstName': string, 'lastName': string, 'edit': boolean }[] = [];
   person: Person = { firstName: '', lastName: '' }
   cancelClicked = false;
-  saved = false
+  saved = false;
+  isAdded=false
 
 
 
   onAdd() {
     if (this.person.firstName != '' || this.person.lastName != '') {
       this.list.push({ 'firstName': this.person.firstName, 'lastName': this.person.lastName, 'edit': false })
+      this.isAdded=true
       this.person.firstName = ''
       this.person.lastName = ''
     }
@@ -26,6 +28,7 @@ export class AppComponent {
   }
   onEdit(index: number) {
     this.list[index].edit = true
+    
 
   }
   delete(index: number) {
@@ -46,6 +49,7 @@ export class AppComponent {
   }
   closeAlert() {
     this.saved = false
+    this.isAdded=false
   }
 
 
