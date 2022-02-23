@@ -23,7 +23,8 @@
 
     <ng-container *ngFor="let i=index;let l of list">
           
-      <tr *ngIf="!l.edit"><td >{{l.firstName}}</td><td>{{l.lastName}}</td><td><button class="btn btn-primary" (click)="onEdit(i)" >Edit</button>
+      <tr *ngIf="!l.edit">
+        <td >{{l.firstName}}</td><td>{{l.lastName}}</td> <td><button class="btn btn-primary" (click)="onEdit(i)" >Edit</button>
         <button class="btn btn-danger" style="margin-left: 16px;" mwlConfirmationPopover
         popoverTitle="Delete Confirmation!!" popoverMessage="Do you really want to delete?"
         placement="right" 

@@ -11,9 +11,13 @@ export class AppComponent {
 
   list: { 'firstName': string, 'lastName': string, 'edit': boolean }[] = [];
   person: Person = { firstName: '', lastName: '' }
-  cancelClicked = false;
-  saved = false;
-  isAdded=false
+ 
+  cancelClicked:boolean = false;
+  saved:boolean = false;
+  isAdded:boolean=false
+  firstName=''
+  lastName=''
+
 
 
 
@@ -21,6 +25,7 @@ export class AppComponent {
     if (this.person.firstName != '' || this.person.lastName != '') {
       this.list.push({ 'firstName': this.person.firstName, 'lastName': this.person.lastName, 'edit': false })
       this.isAdded=true
+     
       this.person.firstName = ''
       this.person.lastName = ''
     }
@@ -28,6 +33,8 @@ export class AppComponent {
   }
   onEdit(index: number) {
     this.list[index].edit = true
+    this.firstName=this.list[index].firstName;
+    this.lastName=this.list[index].lastName;
     
 
   }
@@ -37,14 +44,17 @@ export class AppComponent {
   }
 
   onCancel(index: number) {
-    this.list[index].edit = false
+    
+   this.list[index].firstName=this.firstName
+   this.list[index].lastName=this.lastName
+  
+   this.list[index].edit = false
 
   }
 
   onSave(index: number) {
+    
     this.list[index].edit = false
-    this.list[index].firstName = this.list[index].firstName
-    this.list[index].lastName = this.list[index].lastName
     this.saved = true
   }
   closeAlert() {
