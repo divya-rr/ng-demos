@@ -1,5 +1,5 @@
 export class AuthService{
-    loggedIn:boolean=false
+    loggedIn:boolean=true
 
     logIn(){
         this.loggedIn=true

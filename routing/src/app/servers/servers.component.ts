@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-servers',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
+ 
   servers=[
     {
         id:1,
@@ -23,6 +25,10 @@ export class ServersComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
+
   }
+
+
 
 }
