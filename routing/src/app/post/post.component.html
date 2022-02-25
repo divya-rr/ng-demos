@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col">
+        <form (ngSubmit)="onSubmit(form.value)" #form="ngForm">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" ngModel name="title">
+        </div>
+        <div class="form-group">
+            <label for="post">Content</label>
+            <textarea class="form-control" ngModel name="post"  id="post" cols="30" rows="10"></textarea>
+        </div>
+        <button style="margin-top: 23px;" class="btn btn-primary" >Send posts</button>
+        </form>
+    </div>
+</div>

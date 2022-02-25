@@ -16,6 +16,7 @@ import { AuthenticateComponent } from './authenticate/authenticate.component';
 import { FormsModule } from '@angular/forms';
 import { AuthenticationService } from './authenticate/auth.service';
 import { HttpClientModule } from '@angular/common/http';
+import { PostComponent } from './post/post.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     ServersComponent,
     ServerComponent,
     PageNotFoundComponent,
-    AuthenticateComponent
+    AuthenticateComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,

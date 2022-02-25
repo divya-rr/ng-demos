@@ -2,6 +2,7 @@
     <div class="col-md-6">
         <div class="alert alert-danger" role="alert" *ngIf="error">
            {{error}}
+           <button class="btn btn-default" (click)="onClose()">Ok</button>
           </div>
         <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
             <div class="form-group">
@@ -9,19 +10,20 @@
                 <input type="email" ngModel
                 name="email"
                 required
-                email class="form-control">
+                class="form-control">
             </div>
             <div class="form-group">
                 <label for="pwd">Password</label>
-                <input type="password" class="form-control" ngModel
+                <input type="password" class="form-control" #password="ngModel" ngModel
                 name="password"
                 required
                 minlength="6">
+                <span style="color: red;" *ngIf="password.errors?.['minlength']">Password should be at least 6 characters</span>
             </div>
             <div style="margin-top: 23px;">
-            <button class="btn btn-primary"  type="submit">{{signedUp?'Signup':'Login'}}</button>
+            <button class="btn btn-primary"   type="submit">{{signedUp?'Sign up':'Login'}}</button>
            
-            <button class="btn btn-primary" style="margin-left: 23px;"(click)="logIn()"type="button">Login</button>
+            <button class="btn btn-primary" style="margin-left: 23px;" (click)="onSwitchMode()" type="button">{{signedUp?'Login':'Signup'}}</button>
             </div>
         </form>
     </div>
