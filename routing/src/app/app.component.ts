@@ -9,12 +9,13 @@ import { AuthenticationService } from './authenticate/auth.service';
 })
 export class AppComponent implements OnInit {
   isAuthenticated=false
-  private userSub!: Subscription;
+  userSub!: Subscription;
   title = 'routing';
   constructor(private authService:AuthenticationService){}
   ngOnInit(): void {
       this.userSub=this.authService.user.subscribe(user=>{
-        this.isAuthenticated=!!user
+        this.isAuthenticated=!user?false:true
+       
       })
   }
 }

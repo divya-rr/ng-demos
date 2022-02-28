@@ -16,7 +16,8 @@ export class PostComponent implements OnInit {
     this.postService.fetchPosts().subscribe(res=>{console.log(res)})
   }
   onSubmit(posts: { title: string; content: string; }){
-    this.postService.onCreatePost(posts).subscribe(response=>{console.log(response)})
+    this.postService.onCreatePost(posts).subscribe(response=>{console.log(response)
+    console.log(posts)})
 
   }
 

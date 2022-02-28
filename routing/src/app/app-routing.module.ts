@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth-guard.service';
 import { AuthenticateComponent } from './authenticate/authenticate.component';
+import { UserGuard } from './authenticate/guard-users.service';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PostComponent } from './post/post.component';
@@ -13,6 +14,7 @@ import { UsersComponent } from './users/users.component';
 
 const routes: Routes = [
   {path:"users",component:UsersComponent,
+  // canActivate:[UserGuard],
 
   children:[{path:":id/:name",component:UserComponent}]
 },
@@ -26,6 +28,7 @@ const routes: Routes = [
   }
   ]},
   {path:"",redirectTo:"/home",pathMatch:'full'},
+  {path:"logout",component:AuthenticateComponent},
   {path:"**",component:PageNotFoundComponent}
 
 

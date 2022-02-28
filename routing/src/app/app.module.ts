@@ -17,6 +17,8 @@ import { FormsModule } from '@angular/forms';
 import { AuthenticationService } from './authenticate/auth.service';
 import { HttpClientModule } from '@angular/common/http';
 import { PostComponent } from './post/post.component';
+import { UserGuard } from './authenticate/guard-users.service';
+
 
 @NgModule({
   declarations: [
@@ -28,13 +30,14 @@ import { PostComponent } from './post/post.component';
     ServerComponent,
     PageNotFoundComponent,
     AuthenticateComponent,
-    PostComponent
+    PostComponent,
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,BrowserModule,FormsModule,HttpClientModule
   ],
-  providers: [AuthGuard,AuthService,CanDeactivateGuard,AuthenticationService],
+  providers: [AuthGuard,AuthService,CanDeactivateGuard,AuthenticationService,UserGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

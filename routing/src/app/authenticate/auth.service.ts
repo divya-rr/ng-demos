@@ -4,6 +4,8 @@ import { EmailValidator } from "@angular/forms";
 import { catchError, pipe, Subject, tap } from "rxjs";
 import { Observable, of, from, throwError } from "rxjs";
 import { User } from "./user.model";
+
+
 interface AuthResponseData {
     kind: string;
     idToken: string;
@@ -27,16 +29,25 @@ export class AuthenticationService{
             email:email,password:password,returnsecuretoken:true
         })
         .pipe(catchError(this.handleError),tap(res=>{
-            const user= new User(res.email,res.localId,res.idToken)
-            this.user.next(user)}
-        ))
+            console.log(this.user)
+            console.log(res.expiresIn)
+           this.handleAuthentication(res.email,res.localId,res.idToken)
+           
+        }
+        )
+        )
     }
 
 
     login(email:string,password:string){
         return this.http.post<AuthResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBYbMHxMlntHEu7lrVWBKuuyo8ygGnFseE',{
             email:email,password:password,returnsecuretoken:true
-        }).pipe(catchError(this.handleError))
+        }).pipe(catchError(this.handleError),tap(res=>{
+           
+            this.handleAuthentication(res.email,res.localId,res.idToken)
+            console.log(res.expiresIn)
+         }
+         ))
         // .pipe(catchError(errorResponse=>{
         //     let errorMessage="An error occured"
         //     if(!errorResponse.error || !errorResponse.error.error){
@@ -74,5 +85,18 @@ export class AuthenticationService{
                     return throwError(()=>{return errorMessage})
 
     }
+    private handleAuthentication(email:string,userId:string,token:string){
+        const expirationDate = new Date(new Date().getTime()+ 3600*1000)
+        console.log(expirationDate)
+            const user= new User(email,userId,token,expirationDate)
+            this.user.next(user)
+            console.log("User",user)
+
+
+    }
+
+        
+
+    
 
 }
