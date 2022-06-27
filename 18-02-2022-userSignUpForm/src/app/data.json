@@ -1,0 +1,45 @@
+[
+    {
+        "name":"Divya",
+       "url":"assets/someSunshine.mp4" ,
+       "songName":"Give me some sunshine",
+       "duration":"4 min 40 sec",
+       "image":"../../assets/thumbnail-cover.jpg"
+    },
+    {
+        "name":"2",
+        "url":"../../assets/oceans.mp4" ,
+        "songName":"Oceans",
+        "duration":"46 sec",
+        "image":"../../assets/music.jpg"
+    },
+    {
+        "name":"3",
+        "url":"../assets/BigBuckBunny.mp4" ,
+        "songName":" song 3",
+        "duration":"9min 46 sec",
+        "image":"../../assets/musics.jpg"
+    },
+    {
+        "name":"4",
+        "url":"../assets/oceans.mp4" ,
+        "songName":" song 4",
+        "duration":"46 sec",
+        "image":"../../assets/music-img.jpg"
+    },
+    {
+        "name":"5",
+        "url":"../assets/Alan Walker - Faded.mp4" ,
+        "songName":"Faded",
+        "duration":"3min 32 sec",
+        "image":"../../assets/faded.jpg"
+    },
+    {
+        "id":"6",
+        "url":"../assets/onMyWay.mp4" ,
+        "songName":"On my way",
+        "duration":"3min 36 sec",
+        "image":"../../assets/onmyway.jpg"
+    }
+
+]

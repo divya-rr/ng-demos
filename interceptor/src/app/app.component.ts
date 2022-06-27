@@ -8,9 +8,22 @@ import { InterceptorService } from './service';
 })
 export class AppComponent {
   title = 'interceptor';
+  err!: string;
+  onHandleError(){
+    this.err=''
+  }
+ 
   constructor(private service:InterceptorService){}
   onFetch(){
-    this.service.fetch().subscribe(res=>{console.log(res)})
+    this.service.fetch().subscribe(error=>{
+      console.log(error)
+      this.err="Something went wrong"
+     
+      
+    })
+  
+   
+   
     
   }
 }

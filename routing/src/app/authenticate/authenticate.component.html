@@ -1,10 +1,18 @@
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-8">
         <div class="alert alert-danger" role="alert" *ngIf="error">
            {{error}}
            <button class="btn btn-default" (click)="onClose()">Ok</button>
           </div>
-        <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+       
+       
+       
+           
+            <h3>Already have an account..Welcome back</h3>
+            <div class="card">
+                <div class="card-body">
+                    <form #userForm="ngForm" >
+                    <div class="card-header">Sign in</div>
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" ngModel
@@ -14,17 +22,31 @@
             </div>
             <div class="form-group">
                 <label for="pwd">Password</label>
-                <input type="password" class="form-control" #password="ngModel" ngModel
+                <div id="password">
+                <input [type]="show?'text':'password'" class="form-control" #password="ngModel" ngModel
                 name="password"
                 required
                 minlength="6">
+                <img src="../assets/eye-icon.svg" alt="" (click)="showPassword()" >
+            </div>
                 <span style="color: red;" *ngIf="password.errors?.['minlength']">Password should be at least 6 characters</span>
+           
+            </div>
+            <div class="forget">
+                <a routerLink="/forget">Forgot password?</a>
             </div>
             <div style="margin-top: 23px;">
-            <button class="btn btn-primary"   type="submit">{{signedUp?'Sign up':'Login'}}</button>
+                <button class="btn btn-primary" style="margin-right: 23px;" (click)="signin()" type="submit">Sign in</button> 
+                 <button class="btn btn-primary" routerLink="/register" type="submit"> Go to Sign up page</button>
+            <!-- <button class="btn btn-primary" (click)="signUp()" type="submit">{{signedUp?'Signup':'Login'}}</button> -->
+            <!-- (click)="signin()" -->
            
-            <button class="btn btn-primary" style="margin-left: 23px;" (click)="onSwitchMode()" type="button">{{signedUp?'Login':'Signup'}}</button>
+            <!-- <button class="btn btn-primary" style="margin-left: 23px;" (click)="onSwitchMode()" type="button">{{signedUp?'Login':'Signup'}}</button> -->
             </div>
+            {{userForm.value|json}}
         </form>
+        </div>
+        </div>
+       
     </div>
 </div>

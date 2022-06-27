@@ -20,12 +20,14 @@ interface AuthResponseData {
 @Injectable({providedIn:'root'})
 export class AuthenticationService{
     user=new Subject<User>()
+   
 
 
     constructor(private http:HttpClient){}
 
     signup(email:string,password:string){
-        return this.http.post<AuthResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBYbMHxMlntHEu7lrVWBKuuyo8ygGnFseE',{
+         localStorage.setItem("userData",JSON.stringify(this.user))
+        return this.http.post<AuthResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDMG2gi1pWPlgT6vu-OJYBnO7ZgyDFFVMI',{
             email:email,password:password,returnsecuretoken:true
         })
         .pipe(catchError(this.handleError),tap(res=>{
@@ -37,10 +39,20 @@ export class AuthenticationService{
         )
         )
     }
+    resetPassword(email:string){
+        return this.http.post<AuthResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=AIzaSyDMG2gi1pWPlgT6vu-OJYBnO7ZgyDFFVMI',{
+           email:email,requestType:"PASSWORD_RESET"
+        }).pipe(catchError(this.handleError),tap(res=>{
+           
+           
+         }
+         ))
+
+    }
 
 
-    login(email:string,password:string){
-        return this.http.post<AuthResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBYbMHxMlntHEu7lrVWBKuuyo8ygGnFseE',{
+    signin(email:string,password:string){
+        return this.http.post<AuthResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDMG2gi1pWPlgT6vu-OJYBnO7ZgyDFFVMI',{
             email:email,password:password,returnsecuretoken:true
         }).pipe(catchError(this.handleError),tap(res=>{
            
@@ -48,6 +60,10 @@ export class AuthenticationService{
             console.log(res.expiresIn)
          }
          ))
+
+
+
+        
         // .pipe(catchError(errorResponse=>{
         //     let errorMessage="An error occured"
         //     if(!errorResponse.error || !errorResponse.error.error){
@@ -78,9 +94,13 @@ export class AuthenticationService{
                         break;
                         case 'EMAIL_NOT_FOUND':
                             errorMessage="Email is not found"
-                            break
+                            break;
+                            case 'TOO_MANY_ATTEMPTS_TRY_LATER':
+                                errorMessage="Too many attempts"
+                                break;
                             case 'INVALID_EMAIL':
                                 errorMessage="Please enter valid email"
+                                break;
                     }
                     return throwError(()=>{return errorMessage})
 

@@ -18,6 +18,8 @@ import { AuthenticationService } from './authenticate/auth.service';
 import { HttpClientModule } from '@angular/common/http';
 import { PostComponent } from './post/post.component';
 import { UserGuard } from './authenticate/guard-users.service';
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 
 @NgModule({
@@ -31,6 +33,8 @@ import { UserGuard } from './authenticate/guard-users.service';
     PageNotFoundComponent,
     AuthenticateComponent,
     PostComponent,
+    ForgetPasswordComponent,
+    SignUpComponent,
   
   ],
   imports: [

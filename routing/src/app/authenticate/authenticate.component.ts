@@ -1,3 +1,4 @@
+import { ViewChild } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -11,7 +12,7 @@ import { AuthenticationService } from './auth.service';
 export class AuthenticateComponent implements OnInit {
   signedUp:boolean=true
   error: string = ""
-  
+  @ViewChild('userForm') form!:NgForm
 
   constructor(private authService: AuthenticationService,private route:Router) { }
 
@@ -26,35 +27,53 @@ export class AuthenticateComponent implements OnInit {
   onClose(){
     this.error=""
   }
-
-  
-  onSubmit(form: NgForm) {
-    if (!form.valid) {
+  signin(){
+    if (!this.form.valid) {
       return;
     }
-    const email = form.value.email
-    const password = form.value.password
-    if (this.signedUp) {
-      this.authService.signup(email, password).subscribe(
-        response=>{console.log(response)}
-        ,errorMessage=>{
-          
-        this.error=errorMessage}
+    const email = this.form.value.email
+    const password = this.form.value.password
+    this.authService.signin(email,password).subscribe(
+      response=>{
+      this.route.navigate(['users'])}
+      ,errorMessage=>{
         
-      )
+        this.error=errorMessage}
+    )
+  }
+show=false
+showPassword(){
+  this.show=!this.show
+}
+
+  
+  // onSubmit(form: NgForm) {
+  //   if (!form.valid) {
+  //     return;
+  //   }
+  //   const email = form.value.email
+  //   const password = form.value.password
+  //   if (this.signedUp) {
+  //     this.authService.signup(email, password).subscribe(
+  //       response=>{console.log(response)}
+  //       ,errorMessage=>{
+          
+  //       this.error=errorMessage}
+        
+  //     )
        
      
-    }
-    else{
-      this.authService.login(email,password).subscribe(
-        response=>{console.log(response)
-        this.route.navigate(['users'])}
-        ,errorMessage=>{
+  //   }
+  //   else{
+  //     this.authService.signin(email,password).subscribe(
+  //       response=>{console.log(response)
+  //       this.route.navigate(['users'])}
+  //       ,errorMessage=>{
           
-          this.error=errorMessage}
-      )
-    }
+  //         this.error=errorMessage}
+  //     )
+  //   }
    
 
-  }
+  
 }

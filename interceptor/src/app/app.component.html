@@ -1,1 +1,2 @@
-<button (click)="onFetch()">Fetch</button>
+<app-alert [message]="err" *ngIf="err" (close)="onHandleError()"></app-alert>
+<button class="btn btn-primary" (click)="onFetch()">Fetch</button>

@@ -1,0 +1,25 @@
+.box-position{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0,0.7);
+    z-index: 50;
+}
+.alert-box{
+    position: fixed;
+    top:10vh;
+    width:60vw;
+    z-index: 100;
+    left: 20vw;
+    background: rgb(174, 194, 201);
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0,0.26);
+}
+.box-action{
+    text-align:right
+}
+#message{
+    color:red
+}
